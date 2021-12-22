@@ -1,0 +1,45 @@
+.navbar {
+  background-color: $color-white;
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+  align-items: center;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr);
+
+  &__logo-img {
+    height: 3.5rem;
+    width: 12rem;
+    grid-column: 2 / 3;
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+    grid-column-gap: 4rem;
+
+    list-style: none;
+    grid-column: 3 / 10;
+    justify-content: end;
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: $color-primary-dark;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 2rem;
+    transition: all .2s;
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $color-primary-gray;
+} 
+
+}

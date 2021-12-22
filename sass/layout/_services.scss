@@ -1,0 +1,8 @@
+.services {
+  grid-column: col-start 2 / col-end 7;
+  padding: 10rem 0;
+  &-text {
+    display: grid;
+    justify-content: center;
+  }
+}

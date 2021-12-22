@@ -1,0 +1,37 @@
+.btn {
+
+  &,
+  &:link, 
+  &:visited {
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+  }
+
+    &--white {
+      background-color: $color-white;
+      color: $color-dark;
+      transition: all .2s;
+
+      &:hover {
+        background-color: rgba($color-white, .8);
+      }
+    }
+
+    &--dark {
+      background-color: $color-dark;
+      color: $color-white;
+      transition: all .2s;
+
+      &:hover {
+        background-color: rgba($color-dark, .8);
+      }
+    }
+    
+}

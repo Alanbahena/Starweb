@@ -1,0 +1,62 @@
+.header {
+  background-color: $color-primary-light;
+  grid-column: full-start / full-end;
+  grid-row: 2 / 3;
+  background-color: $color-dark;
+  background-image: url(../img/header.png);
+  background-size: cover; 
+  background-position: center;
+  
+
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr);
+
+  &__description {
+   grid-column: 2 / 6;
+   color: $color-white;
+
+   display: grid;
+   grid-template-columns: minmax(min-content, max-content);
+   grid-template-rows: min-content min-content min-content;
+   align-content: center;
+   justify-content: center;
+
+   animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+   &-slogan {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: 6px;
+    align-items: center;
+    justify-content: start;
+   }
+  }
+
+  &__bars {
+    height: 1.3rem;
+    width: 1.2rem;
+  }
+
+  &__computer {
+    grid-column: 6 / 10;
+  }
+
+  &__btn {
+    margin-top: 2.2rem;
+    align-self: start;
+    justify-self: start;
+  }
+
+  &__computer {
+    display: flex; 
+    justify-content: center;
+
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+
+}

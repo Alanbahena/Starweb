@@ -1,0 +1,87 @@
+.contact {
+  background-color: rgba($color-dark, 0.05); 
+  grid-column: full-start / full-end;
+  padding-bottom: 5rem;
+
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 19rem) [col-end] ) [center-end] minmax(6rem, 1fr);
+  grid-template-rows: repeat(2, min-content); 
+
+  &__profile {
+    grid-column: center-start / center-end;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    display: grid;
+    // grid-template-columns: repeat(2, max-content);
+    // column-gap: 8rem;
+    grid-template-columns: repeat(8, minmax(min-content, 19rem)); 
+    // justify-content: center;
+  }
+
+  &__photo {
+    grid-column: 2 / 5;
+    justify-self: center;
+    width: 30rem;
+    border-radius: 50%;
+    display: block;
+    opacity: 0.8;
+    box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.15);
+  }
+
+  &__welcoming {
+    grid-column: 5 / 8;
+    row-gap: 1rem;
+    display: grid;
+    align-content: center;
+  }
+
+  &__hello {
+    font-family: $font-display;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+
+  &__name {
+    font-family: $font-display;
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  &__description {
+    font-family: $font-primary;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+  }
+
+  //SUBMIT SECTION
+
+
+  &__submit {
+    grid-column: center-start / center-end;
+    grid-row: 2 / 3;
+    padding: 8rem 0; 
+    background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.1), rgba($color-tertiary-dark, 0.1));
+    border-radius: 5px;
+    box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.15);
+
+    display: grid;
+    grid-template-columns: repeat(8, minmax(min-content, 19rem)); 
+
+    &-form {
+      grid-column: 2 / 8;
+    }
+
+    &-heading {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+
+  }
+
+
+
+
+}

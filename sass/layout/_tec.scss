@@ -1,0 +1,55 @@
+.tec {
+
+  &__description-1 {
+    background-color: rgba($color-dark, 0.03);
+    grid-column: full-start / col-end 4;
+    grid-row: 4 / 5;
+    padding: 6rem 7vw;
+
+    display: grid;
+    align-content: center;
+    justify-items: start;
+
+
+  }
+
+  &__pictures-1 {
+    background-image: linear-gradient(rgba($color-dark, .7), rgba($color-primary-dark, .7)), url(../img/description1.jpg);
+    background-size: cover;
+
+    grid-column: col-end 4 / full-end;
+    grid-row: 4 / 5;
+
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+
+
+  }
+
+  &__description-2 {
+    background-color: rgba($color-dark, 0.03);
+    grid-column: col-end 4 / full-end;
+    grid-row: 5 / 6;
+
+    padding: 6rem 4vw;
+
+    display: grid;
+    align-content: center;
+    justify-items: start;
+  }
+
+  &__pictures-2 {
+    background-image: linear-gradient(rgba($color-dark, .7), rgba($color-primary-dark, .7)), url(../img/description2.jpg);
+    background-size: cover;
+
+    grid-column: full-start / col-end 4;
+    grid-row: 5 / 6;
+
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+  }
+}
