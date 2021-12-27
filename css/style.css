@@ -31,23 +31,23 @@ html {
 
 .container {
   display: grid;
-  grid-template-rows: min-content 80vh min-content repeat(2, 35vw) repeat(3, min-content);
+  grid-template-rows: min-content 80vh min-content repeat(2, 90vh) repeat(3, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 19rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #000000;
   font-weight: 400;
   line-height: 1.6; }
 
 .heading-1 {
   font-size: 3.5rem;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.1rem;
   line-height: 1.3; }
 
 .heading-2 {
-  font-family: "Merriweather", serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 700;
   font-size: 3rem;
   letter-spacing: 0.1rem;
@@ -58,7 +58,7 @@ body {
     color: #FFFFFF; }
 
 .heading-3 {
-  font-family: "Merriweather", serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 700;
   font-size: 2.2rem;
   letter-spacing: 0.1rem;
@@ -69,7 +69,7 @@ body {
     color: #FFFFFF; }
 
 .heading-4 {
-  font-family: "Merriweather", serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 700;
   font-size: 2rem;
   letter-spacing: 0.1rem;
@@ -102,7 +102,7 @@ body {
   letter-spacing: 0.1rem; }
 
 .footer__slogan-text {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
@@ -117,16 +117,16 @@ body {
     bottom: 0;
     height: 1px;
     width: 50%;
-    border-bottom: 4px solid rgba(121, 174, 242, 0.6);
+    border-bottom: 4px solid rgba(193, 163, 0, 0.6);
     padding-bottom: 2rem; }
 
 .copyright {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.4rem; }
 
 .city {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.4rem; }
 
@@ -141,7 +141,7 @@ body {
   display: inline-block;
   border: none;
   border-radius: 5px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   cursor: pointer;
@@ -161,11 +161,18 @@ body {
   .btn--dark:hover {
     background-color: rgba(0, 0, 0, 0.8); }
 
+.btn--yellow {
+  background-color: #FFF28B;
+  color: #000000;
+  transition: all .2s; }
+  .btn--yellow:hover {
+    background-color: rgba(255, 242, 139, 0.8); }
+
 .header__computer-gif {
   max-width: 100%;
   max-height: 100%;
   align-self: center;
-  opacity: 0.8; }
+  opacity: 0.75; }
 
 .list {
   list-style: none;
@@ -358,6 +365,18 @@ textarea {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
     border-bottom: 3px solid #55c57a; }
 
+.bg-video {
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+  position: relative; }
+  .bg-video__content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.3; }
+
 .computer {
   background-color: #023E73; }
 
@@ -388,16 +407,16 @@ textarea {
     display: grid;
     align-content: center; }
   .contact__hello {
-    font-family: "Merriweather", serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 700;
     font-size: 2.5rem; }
   .contact__name {
-    font-family: "Merriweather", serif;
+    font-family: "Roboto Slab", serif;
     font-weight: 700;
     font-size: 2.2rem;
     letter-spacing: 0.1rem; }
   .contact__description {
-    font-family: "Roboto", sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 1.7rem;
     letter-spacing: 0.1rem; }
   .contact__submit {
@@ -470,7 +489,7 @@ textarea {
       font-size: 1.4rem;
       color: #FFFFFF;
       text-decoration: none;
-      font-family: "Roboto", sans-serif;
+      font-family: "Lato", sans-serif;
       text-transform: uppercase;
       text-align: center;
       padding: 1.5rem;
@@ -496,17 +515,15 @@ textarea {
   text-align: center; }
 
 .header {
-  background-color: #79AEF2;
+  background-color: #000000;
   grid-column: full-start / full-end;
   grid-row: 2 / 3;
-  background-color: #000000;
-  background-image: url(../img/header.png);
-  background-size: cover;
-  background-position: center;
   display: grid;
-  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr); }
+  grid-template-columns: [full-start] minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr) [full-end]; }
   .header__description {
     grid-column: 2 / 6;
+    grid-row: 1 / 2;
+    z-index: 1;
     color: #FFFFFF;
     display: grid;
     grid-template-columns: minmax(min-content, max-content);
@@ -526,9 +543,11 @@ textarea {
     height: 1.3rem;
     width: 1.2rem; }
   .header__computer {
-    grid-column: 6 / 10; }
+    grid-column: 6 / 10;
+    grid-row: 1 / 2;
+    z-index: 1; }
   .header__btn {
-    margin-top: 2.2rem;
+    margin-top: 2.5rem;
     align-self: start;
     justify-self: start; }
   .header__computer {
@@ -568,7 +587,7 @@ textarea {
     font-size: 2rem;
     transition: all .2s; }
   .navbar__link:hover, .navbar__link:active {
-    color: #727272; }
+    color: #C1A300; }
 
 .services {
   grid-column: col-start 2 / col-end 7;

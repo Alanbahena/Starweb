@@ -1,0 +1,15 @@
+.bg-video {
+  grid-column: full-start / full-end; 
+  grid-row: 1 / 2;
+  position: relative;
+
+  &__content {
+    position: absolute;  
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.3;
+  }
+
+}

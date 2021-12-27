@@ -1,18 +1,21 @@
 .header {
-  background-color: $color-primary-light;
-  grid-column: full-start / full-end;
-  grid-row: 2 / 3;
   background-color: $color-dark;
-  background-image: url(../img/header.png);
-  background-size: cover; 
-  background-position: center;
+  grid-column: full-start / full-end;
+  grid-row: 2 / 3; 
+
+  // background-color: $color-dark;
+  // background-image: url(../img/header.png);
+  // background-size: cover; 
+  // background-position: center;
   
 
   display: grid;
-  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr) [full-end];
 
   &__description {
    grid-column: 2 / 6;
+   grid-row: 1 / 2;
+   z-index: 1;
    color: $color-white;
 
    display: grid;
@@ -41,10 +44,12 @@
 
   &__computer {
     grid-column: 6 / 10;
+    grid-row: 1 / 2;
+    z-index: 1;
   }
 
   &__btn {
-    margin-top: 2.2rem;
+    margin-top: 2.5rem;
     align-self: start;
     justify-self: start;
   }
