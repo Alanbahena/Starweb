@@ -1,3 +1,17 @@
-.contact {
-  
+.description-1 {
+  background-color: rgba($color-dark, 0.03);
+  grid-column: full-start / full-end;
+  grid-row: 4 / 5;
+
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr) [full-end];
+}
+
+.description-2 {
+  background-color: rgba($color-dark, 0.03);
+  grid-column: full-start / full-end;
+  grid-row: 5 / 6;
+
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr) [full-end];
 }

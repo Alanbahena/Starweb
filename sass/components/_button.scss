@@ -43,5 +43,15 @@
         background-color: rgba($color-yellow, .8);
       }
     }
+
+    &--yellow-dark {
+      background-color: $color-yellow-dark;
+      color: $color-dark;
+      transition: all .2s;
+
+      &:hover {
+        background-color: rgba($color-yellow-dark, .8);
+      }
+    }
     
 }

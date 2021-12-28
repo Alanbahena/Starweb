@@ -1,39 +1,40 @@
 .tec {
 
   &__description-1 {
-    background-color: rgba($color-dark, 0.03);
-    grid-column: full-start / col-end 4;
-    grid-row: 4 / 5;
-    padding: 6rem 7vw;
+    grid-column: 2 / 6;
+    grid-row: 1 / 2;
 
     display: grid;
     align-content: center;
     justify-items: start;
-
-
   }
 
   &__pictures-1 {
-    background-image: linear-gradient(rgba($color-dark, .7), rgba($color-primary-dark, .7)), url(../img/description1.jpg);
-    background-size: cover;
-
-    grid-column: col-end 4 / full-end;
-    grid-row: 4 / 5;
+    grid-column: 6 / 10;
 
     display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     align-items: center;
+
+    &-iphone {
+      width: 100%;
+      grid-row: 3 / 8;
+      grid-column: 2 / 4;
+      opacity: 0.8;
+      z-index: 10;
+
+      &:hover { 
+        // width: 115%;
+      }
+    }
 
 
   }
 
   &__description-2 {
-    background-color: rgba($color-dark, 0.03);
-    grid-column: col-end 4 / full-end;
-    grid-row: 5 / 6;
-
-    padding: 6rem 4vw;
+    grid-column: 6 / 10;
+    grid-row: 1 / 2;
 
     display: grid;
     align-content: center;
@@ -41,15 +42,20 @@
   }
 
   &__pictures-2 {
-    background-image: linear-gradient(rgba($color-dark, .7), rgba($color-primary-dark, .7)), url(../img/description2.jpg);
-    background-size: cover;
-
-    grid-column: full-start / col-end 4;
-    grid-row: 5 / 6;
+    grid-column: 2 / 6;
 
     display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     align-items: center;
+
+    &-iphone2 {
+      justify-items: center;
+      width: 100%;
+      grid-row: 3 / 9;
+      grid-column: 3 / 5;
+      opacity: 0.9;
+      z-index: 10;
+    }
   }
 }
