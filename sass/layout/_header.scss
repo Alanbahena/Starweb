@@ -3,12 +3,6 @@
   grid-column: full-start / full-end;
   grid-row: 2 / 3; 
 
-  // background-color: $color-dark;
-  // background-image: url(../img/header.png);
-  // background-size: cover; 
-  // background-position: center;
-  
-
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr) [full-end];
 
