@@ -627,25 +627,73 @@ textarea {
   z-index: 100;
   display: grid;
   grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr); }
-  .navbar__logo-img {
-    height: 3.5rem;
-    width: 12rem;
-    grid-column: 2 / 3; }
-  .navbar__links {
-    display: grid;
-    grid-template-columns: repeat(5, min-content);
-    grid-column-gap: 4rem;
-    list-style: none;
-    grid-column: 3 / 10;
-    justify-content: end; }
-  .navbar__link:link, .navbar__link:visited {
-    color: #021C26;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 2rem;
-    transition: all .2s; }
-  .navbar__link:hover, .navbar__link:active {
-    color: #C1A300; }
+  .navbar__container {
+    grid-column: 2 / 10;
+    grid-row: 1 / 2;
+    align-items: center;
+    display: flex; }
+    .navbar__container-logo {
+      height: 3.5rem;
+      width: 12rem; }
+    .navbar__container-links {
+      display: flex;
+      margin-left: auto;
+      list-style: none;
+      height: 100%; }
+    .navbar__container-link:link, .navbar__container-link:visited {
+      color: #021C26;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 2rem;
+      margin-left: 4rem;
+      transition: all .2s; }
+    .navbar__container-link:hover, .navbar__container-link:active {
+      color: #C1A300; }
+
+@media only screen and (max-width: 56.25em) {
+  .line {
+    width: 30px;
+    height: 2px;
+    background: #021C26;
+    margin: 4px; }
+    .line.color {
+      background: #FFFFFF; }
+  .navbar__container {
+    position: relative; }
+    .navbar__container-hamburguer {
+      position: absolute;
+      cursor: pointer;
+      right: 0%;
+      top: 0%;
+      transform: translate(0%, 0%);
+      z-index: 2; }
+    .navbar__container-links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-image: radial-gradient(#79AEF2, #021C26);
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      clip-path: circle(100px at 90% -11%);
+      -webkit-clip-path: circle(100px at 90% -11%);
+      transition: all 1s ease-out;
+      pointer-events: none; }
+    .navbar__container-links.open {
+      clip-path: circle(1500px at 90% -11%);
+      -webkit-clip-path: circle(1500px at 90% -11%);
+      pointer-events: all; }
+    .navbar__container-link:link, .navbar__container-link:visited {
+      color: #FFFFFF;
+      font-weight: 400;
+      font-size: 3rem;
+      display: inline-block;
+      padding: 1rem 2rem;
+      text-transform: uppercase; }
+    .navbar__container-link:hover, .navbar__container-link:active {
+      color: #FFF28B; } }
 
 .services {
   grid-column: col-start 2 / col-end 7;

@@ -12,42 +12,115 @@
   display: grid;
   grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr);
 
-  &__logo-img {
-    height: 3.5rem;
-    width: 12rem;
-    grid-column: 2 / 3;
+  &__container {
+    grid-column: 2 / 10;
+    grid-row: 1 / 2;
+    align-items: center;
+
+    display: flex;
+
+    &-logo {
+      height: 3.5rem;
+      width: 12rem;
+    }
+
+    &-links {
+      display: flex;
+      margin-left: auto;
+      list-style: none;
+      height: 100%;
+    }
+
+    &-link:link,
+    &-link:visited {
+      color: $color-primary-dark;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 2rem;
+      margin-left: 4rem;
+      transition: all .2s;
+
+    }
+
+    &-link:hover,
+    &-link:active {
+      color: $color-yellow-dark;
+    } 
   }
-
-  &__links {
-    display: grid;
-    grid-template-columns: repeat(5, min-content);
-    grid-column-gap: 4rem;
-
-    list-style: none;
-    grid-column: 3 / 10;
-    justify-content: end;
-  }
-
-  &__link:link,
-  &__link:visited {
-    color: $color-primary-dark;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 2rem;
-    transition: all .2s;
-  }
-
-  &__link:hover,
-  &__link:active {
-    color: $color-yellow-dark;
-} 
 
 }
 
 @include respond(tab-port) { 
+
+  .line {
+    width: 30px;
+    height: 2px;
+    background: $color-primary-dark;
+    margin: 4px;
+
+    &.color {
+      background: $color-white;
+    }
+  }
   
   .navbar {
+    
+    &__container {
 
+      position: relative;
+
+      &-hamburguer {
+        position: absolute;
+        cursor: pointer;
+        right: 0%;
+        top: 0%;
+        transform: translate(-0%, -0%);
+        z-index: 2;
+      }
+  
+      &-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        // display: none;
+
+        clip-path: circle(100px at 90% -11%);
+        -webkit-clip-path: circle(100px at 90% -11%);
+
+        transition: all 1s ease-out;
+        pointer-events: none;
+
+      }
+
+      &-links.open {
+        clip-path: circle(1500px at 90% -11%);
+        -webkit-clip-path: circle(1500px at 90% -11%);
+        pointer-events: all;
+      }
+
+      &-link:link,
+      &-link:visited {
+        color: $color-white;
+        font-weight: 400;
+        font-size: 3rem;
+
+        display: inline-block;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+      }
+
+      &-link:hover,
+      &-link:active {
+        color: $color-yellow;
+      } 
+
+    }
 
   }
 
