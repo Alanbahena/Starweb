@@ -6,10 +6,15 @@ body {
 }
 
 .heading-1 {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
   line-height: 1.3;
+
+  @include respond (mini-phone) {
+    text-align: center;
+  }
+
 }
 
 .heading-2 {

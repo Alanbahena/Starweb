@@ -6,7 +6,9 @@
   opacity: 1;
   box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.60);
 
-  &:hover {
-    // width: 115%;
+  @include respond (phone) {
+    grid-column: 2 / 8;
   }
+
+
 }

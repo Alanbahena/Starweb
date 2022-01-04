@@ -4,5 +4,27 @@
     grid-row: 1 / 7;
     grid-column: 1 / 7;
     opacity: 1;
+
+    @include respond (tab-land) {
+      grid-row: 1 / 7;
+      grid-column: 1 / 9;
+    }
+
+    @include respond (mini-tab) {
+
+      align-self: flex-start;
+      justify-self: center;
+      width: 90%;
+      grid-row: 2 / 8;
+      grid-column: 1 / 9;
+    }
+
+    @include respond (phone) {
+      align-self: center;
+      grid-row: 1 / 7;
+      grid-column: 1 / 9;
+    }
+
+
   }
 }

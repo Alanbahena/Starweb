@@ -7,6 +7,20 @@
     display: grid;
     align-content: center;
     justify-items: start;
+
+    @include respond (tab-land) {
+      grid-column: 2 / 5;
+    }
+
+    @include respond (mini-tab) {
+      grid-column: 2 / 8;
+    }
+
+    @include respond (phone) {
+      grid-column: 2 / 10;
+    }
+
+
   }
 
   &__pictures-1 {
@@ -17,6 +31,19 @@
     grid-template-columns: repeat(8, 1fr);
     align-items: center;
 
+    @include respond (tab-land) {
+      grid-column: 5 / 10;
+    }
+
+    @include respond (mini-tab) {
+      grid-column: 2 / 10;
+      grid-row: 2 / 3;
+    }
+
+    @include respond (phone) {
+      grid-column: 2 / 10;
+    }
+
     &-iphone {
       width: 100%;
       grid-row: 3 / 8;
@@ -24,10 +51,13 @@
       opacity: 0.9;
       z-index: 10;
 
-      &:hover { 
-        // width: 115%;
+      @include respond (phone) {
+        grid-column: 1 / 3;
       }
+
     }
+
+    
 
 
   }
@@ -39,6 +69,19 @@
     display: grid;
     align-content: center;
     justify-items: start;
+
+    @include respond (tab-land) {
+      grid-column: 7 / 10;
+    }
+
+    @include respond (mini-tab) {
+      grid-column: 2 / 8;
+    }
+
+    @include respond (phone) {
+      grid-column: 2 / 10;
+    }
+
   }
 
   &__pictures-2 {
@@ -49,13 +92,60 @@
     grid-template-columns: repeat(8, 1fr);
     align-items: center;
 
+    @include respond (tab-land) {
+      grid-column: 2 / 6;
+    }
+
+    @include respond (mini-tab) {
+      grid-column: 2 / 10;
+      grid-row: 2 / 3;
+    }
+
+    @include respond (phone) {
+      grid-column: 2 / 10;
+    }
+
     &-iphone2 {
       justify-items: center;
       width: 100%;
       grid-row: 3 / 9;
       grid-column: 3 / 5;
-      opacity: 0.9;
+      opacity: 1;
       z-index: 10;
+
+      @include respond (tab-land) {
+        justify-self: center;
+        width: 120%;
+        grid-column: 4 / 6;
+      }
+
+      @include respond (mini-tab) {
+        width: 90%;
+        grid-row: 5 / 9;
+      }
+
+      @include respond (phone) {
+        width: 100%;
+        grid-row: 4 / 8;
+      }
+
     }
   }
+}
+
+.description--btn {
+
+  @include respond (tab-land) {
+    margin-top: 1.5rem;
+    
+  }
+
+  @include respond (phone) {
+    margin-top: 1rem;
+  }
+
+  @include respond (mini-phone) {
+    margin-top: 2rem;
+  }
+
 }

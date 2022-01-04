@@ -1,9 +1,21 @@
 .header {
+
     &__computer-gif {
-      max-width: 100%;
+      max-width: 80%;
       max-height: 100%;
       align-self: center;
       opacity: 0.85;
+
+      @include respond(tab-land) {
+        max-width: 100%;
+      }
+
+      @include respond(mini-tab) {
+        display: none;
+      }
+
+
+
     } 
 }
 

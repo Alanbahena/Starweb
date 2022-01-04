@@ -30,5 +30,8 @@ html {
   grid-template-rows: min-content 80vh min-content repeat(2, 75vh) repeat(3, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 19rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
 
+  @include respond (mini-tab) {
+    grid-template-rows: min-content 80vh min-content repeat(2, min-content) repeat(3, min-content);
+  }
 
 }

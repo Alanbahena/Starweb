@@ -7,10 +7,22 @@
   grid-template-columns: [full-start] minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr) [full-end];
 
   &__description {
-   grid-column: 2 / 6;
+   grid-column: 2 / 6; 
    grid-row: 1 / 2;
    z-index: 1;
    color: $color-white;
+
+    @include respond(tab-land) {
+      grid-column: 2 / 5;
+    }
+
+    @include respond(mini-tab) {
+      grid-column: 2 / 8;
+    }
+
+    @include respond (mini-phone) {
+      grid-column: 2 / 10;
+    }
 
    display: grid;
    grid-template-columns: minmax(min-content, max-content);
@@ -28,6 +40,11 @@
     grid-column-gap: 6px;
     align-items: center;
     justify-content: start;
+
+    @include respond (mini-phone) {
+      justify-content: center;
+    }
+
    }
   }
 
@@ -46,6 +63,15 @@
     margin-top: 2.5rem;
     align-self: start;
     justify-self: start;
+
+    @include respond (mini-tab) {
+      margin-top: 3.5rem;
+    }
+
+    @include respond (mini-phone) {
+      margin-top: 4.5rem;
+      justify-self: center;
+    }
   }
 
   &__computer {
