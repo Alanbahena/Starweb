@@ -32,6 +32,10 @@ ORDER:  Base + typography > general layout + grid > page layout > components
     @media only screen and (max-width: 37.5em) { @content }; //600px
   }
 
+  @if $breakpoint == footer {
+    @media only screen and (max-width: 39.1em) { @content }; //600px
+  }
+
   @if $breakpoint == mini-tab {
     @media only screen and (max-width: 46.87em) { @content }; //750px
   }

@@ -24,6 +24,42 @@
     mask-size: cover;
 
   }
+}
 
+.list__popup {
+
+  list-style: none;
+  margin-bottom: 2rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 1.5rem;
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+
+      @include respond(tab-port) {
+        margin-bottom: 0.3rem;
+      }
+
+    }
+  }
+
+  &-item:before {
+    content: "";
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: .7rem;
+
+    background-color: $color-secondary-dark;
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    mask-image: url(../img/chevron-thin-right.svg);
+
+    -webkit-mask-size: cover;
+    mask-size: cover;
+
+  }
 
 }

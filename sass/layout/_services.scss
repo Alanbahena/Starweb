@@ -1,5 +1,6 @@
 .services {
   grid-column: col-start 2 / col-end 7;
+  grid-row: 6 / 7;
   padding: 10rem 0;
   &-text {
     display: grid;

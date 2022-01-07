@@ -21,7 +21,15 @@
 
     <nav class="navbar">
       <div class="navbar__container">
-        <img src="img/logo.png" alt="Logo" class="navbar__container-logo">
+
+        <img srcset="img/logo-small.png 157w, img/logo.png 314w"
+             sizes="(max-width: 900px) 11vw 120px"
+             alt="Logo"
+             class="navbar__container-logo"
+             src="img/logo.png"> 
+
+        <!-- <img src="img/logo.png" alt="Logo" class="navbar__container-logo"> -->
+
         <input type="checkbox" class="navbar__container-checkbox" id="navi-toggle">
         <label for="navi-toggle" class="navbar__container-button">
           <span class="navbar__container-button-icon">&nbsp;</span>
@@ -29,9 +37,9 @@
         <div class="navbar__container-background">&nbsp;</div>
         <div class="navbar__container-nav">
           <ul class="navbar__container-nav-links">
-            <li><a href="#" class="navbar__container-nav-link">Inicio</a></li>
-            <li><a href="#" class="navbar__container-nav-link">Servicios</a></li>
-            <li><a href="#" class="navbar__container-nav-link">Tecnologías</a></li>
+            <li><a href="#inicio" class="navbar__container-nav-link">Inicio</a></li>
+            <li><a href="#servicios" class="navbar__container-nav-link">Servicios</a></li>
+            <li><a href="#popup" class="navbar__container-nav-link">Tecnologías</a></li>
             <li><a href="#" class="navbar__container-nav-link">Acerca</a></li> 
             <li><a href="#" class="navbar__container-nav-link">Contacto</a></li> 
           </ul>
@@ -39,7 +47,7 @@
       </div>
     </nav>
 
-    <header class="header"> 
+    <header class="header" id="inicio"> 
 
       <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
@@ -57,11 +65,18 @@
         </div>
 
         <h1 class="heading-1">Convierte tus ideas en páginas web y llevalas al siguiente nivel en el mundo digital</h1>
-        <a href="#" class="btn btn--yellow header__btn">Contáctame</a>
+        <a href="#popup-profile" class="btn btn--yellow header__btn">Contáctame</a>
       </div>
   
       <div class="header__computer">
-        <img src="img/header_lap.png" alt="Computer" class="header__computer-gif">
+
+        <img srcset="img/header_lap-small.png 600w, img/header_lap.png 1200w"
+             sizes="(max-width: 900px) 32vw, 600px"
+             alt="Computer"
+             class="header__computer-gif"
+             src="img/header_lap.png"> 
+
+        <!-- <img src="img/header_lap.png" alt="Computer" class="header__computer-gif"> -->
       </div>
 
     </header>
@@ -135,7 +150,14 @@
       </div>
   
       <div class="tec__pictures-1">
-        <img src="img/iphone.png" alt="iphone" class="tec__pictures-1-iphone">
+
+        <img srcset="img/iphone-small.png 160w, img/iphone.png 319w"
+        sizes="(max-width: 900px) 11vw, (max-width: 600px) 14vw,  190px"
+        alt="iphone"
+        class="tec__pictures-1-iphone"
+        src="img/iphone.png"> 
+
+        <!-- <img src="img/iphone.png" alt="iphone" class="tec__pictures-1-iphone"> -->
 
         <video class="video__content" autoplay muted loop>
             <source src="img/video1.mp4" type="video/mp4">
@@ -162,8 +184,21 @@
       </div>
   
       <div class="tec__pictures-2">
-        <img src="img/laptop-1.png" alt="Laptop" class="tec__pictures-2-img">
-        <img src="img/iphone2.png" alt="Iphone2" class="tec__pictures-2-iphone2">
+
+        <img srcset="img/laptop-1-small.png 350w, img/laptop-1.png 700w"
+        sizes="(max-width: 900px) 36vw, (max-width: 600px) 49vw,  570px"
+        alt="Laptop"
+        class="tec__pictures-2-img" 
+        src="img/laptop-1.png"> 
+
+        <img srcset="img/iphone2-small.png 160w, img/iphone2.png 319w"
+        sizes="(max-width: 900px) 11vw, (max-width: 600px) 14vw,  190px"
+        alt="Iphone2"
+        class="tec__pictures-2-iphone2" 
+        src="img/iphone2.png"> 
+
+        <!-- <img src="img/laptop-1.png" alt="Laptop" class="tec__pictures-2-img"> -->
+        <!-- <img src="img/iphone2.png" alt="Iphone2" class="tec__pictures-2-iphone2"> -->
       </div>
     </section>
 
@@ -171,7 +206,7 @@
 
   
 
-    <section class="services">
+    <section class="services" id="servicios">
 
       <div class="services-text">
         <h2 class="heading-2 heading-2--dark heading-2--center-line">Los servicios más populares</h2>
@@ -203,7 +238,7 @@
                 <p class="card__price-only">Desde</p>
                 <p class="card__price-value">$300</p>
               </div>
-              <a href="#popup" class=" btn btn--white">Crea tu Página</a>
+              <a href="#popup-description" class=" btn btn--white">Crea tu Página</a>
             </div>
           </div>
         </div>
@@ -232,7 +267,7 @@
                 <p class="card__price-only">Desde</p>
                 <p class="card__price-value">$650</p>
               </div>
-              <a href="#popup" class=" btn btn--white">Crea tu Página</a>
+              <a href="#popup-description" class=" btn btn--white">Crea tu Página</a>
             </div>
           </div>
         </div>
@@ -267,7 +302,7 @@
 
     </section>
 
-    <section class="contact">
+    <section class="contact" id="section-contact">
 
       <div class="bg-video2">
         <video class="bg-video2__content" autoplay muted loop>
@@ -293,7 +328,7 @@
             </div>
 
             <div class="form__group">
-              <textarea name="email-text" id="email-text" placeholder="Platícame de tu proyecto " rows="9" required></textarea>
+              <textarea class="textbox" name="email-text" id="email-text" placeholder="Platícame de tu proyecto " rows="9" required></textarea>
             </div>
             
             <button class="btn btn--yellow form-btn">Comencemos</button>
@@ -301,9 +336,16 @@
         </div>
 
         <div class="contact__submit-profile">
+
+          <!-- <img srcset="img/profile-small.jpg 225w, img/profile.jpg 450w"
+        sizes="(max-width: 900px) 26vw, (max-width: 600px) 35vw, (max-width: 450px) 24vw,  346px"
+        alt="Profile"
+        class="contact__submit-profile--photo" 
+        src="img/profile.jpg">  -->
+
           <img src="img/profile.jpg" alt="Profile" class="contact__submit-profile--photo">
   
-            <h4 class="heading-4 heading-4--white">¡Hola! Mi nombre es Alan</h4>
+            <h4 class="heading-4 heading-4--white heading-4--end">¡Hola! Mi nombre es Alan</h4>
             <p class="contact__submit-profile--description">Soy un desarrollador web freelancer, ingeniero y emprendedor con años de experiencia. Mi propósito es ayudarte a crear paginas web funcionales que generen un impacto en tu audiencia. ¡Iniciemos juntos tu próximo proyecto! </p>
           
         </div>
@@ -317,7 +359,14 @@
       <div class="footer__content">
  
         <div class="footer__slogan">
-          <img src="img/logo-footer.png" alt="logo" class="footer__slogan-logo">
+
+          <img srcset="img/logo-footer-small.png 157w, img/logo-footer.png 314w"
+        sizes="(max-width: 900px) 11vw,  120px"
+        alt="logo"
+        class="footer__slogan-logo" 
+        src="img/logo-footer.png"> 
+
+          <!-- <img src="img/logo-footer.png" alt="logo" class="footer__slogan-logo"> -->
           <p class="footer__slogan-text">Convierte tus ideas en páginas web y llevalas al siguiente nivel en el mundo digital</p>
         </div>
         
@@ -337,9 +386,107 @@
 
     </footer>
 
+    <div class="popup" id="popup-description">
+
+      <div class="popup__content">
+
+        <img srcset="img/popup1-small.jpg 480w, img/popup1.jpg 960w"
+        sizes="(max-width: 900px) 37vw,  587px"
+        alt="Servicio Foto"
+        class="popup__img1" 
+        src="img/popup1.jpg"> 
+
+        <img srcset="img/popup2-small.jpg 480w, img/popup2.jpg 960w"
+        sizes="(max-width: 900px) 37vw,  587px"
+        alt="Servicio Foto"
+        class="popup__img2" 
+        src="img/popup2.jpg"> 
+
+          <!-- <img src="img/popup1.jpg" alt="Servicio Foto" class="popup__img1"> -->
+          <!-- <img src="img/popup2.jpg" alt="Servicio Foto" class="popup__img2"> -->
+        
+          <div class="popup__description">
+
+            <div class="popup__submit-form">
+              <a href="#" class="popup__close">&times;</a>
+              <h2 class="heading-2 heading-2--yellow">Iniciemos juntos tu próximo proyecto</h2>
+              <p class="popup-description">Soy un desarrollador web freelancer, ingeniero y emprendedor con años de experiencia. Mi propósito es ayudarte a crear paginas web funcionales.</p>
+              
+              <form action="#" class="form">
+                <div class="form__group">
+                  <input type="text" class="form__input form__input-dark" placeholder="Nombre Completo" id="name" required autocomplete="off">
+                  <label for="name" class="form__label form__label-dark">Nombre Completo</label>
+                </div>
+    
+                <div class="form__group">
+                  <input type="email" class="form__input form__input-dark" placeholder="Correo Electornico" id="email" required autocomplete="off">
+                  <label for="email" class="form__label form__label-dark">Corre Electronico</label>
+                </div>
+    
+                <div class="form__group">
+                  <textarea class="textbox textbox-dark" name="email-text" id="email-text" placeholder="Platícame de tu proyecto " rows="9" required></textarea>
+                </div>
+                
+                <button class="btn btn--yellow-dark form-btn form-btn-dark">Comencemos</button>
+              </form>
+            </div>
+          </div>
+
+      </div>
+
+    </div>
 
 
+    <div class="popup__profile" id="popup-profile">
 
+      <div class="popup__profile-content">
+
+        <img srcset="img/profile-small.jpg 225w, img/profile.jpg 450w"
+        sizes="(max-width: 900px) 37vw, (max-width: 600px) 28vw,  434px"
+        alt="Profile photo"
+        class="popup__profile-img" 
+        src="img/profile.jpg"> 
+
+        <img srcset="img/profile2-small.jpg 640w, img/profile2.jpg 1280w"
+        sizes="(max-width: 900px) 37vw, (max-width: 600px) 24vw,  462px"
+        alt="Profile photo"
+        class="popup__profile-img2" 
+        src="img/profile2.jpg"> 
+
+        <!-- <img src="img/profile.jpg" alt="Profile photo" class="popup__profile-img"> -->
+        <!-- <img src="img/profile2.jpg" alt="Profile photo" class="popup__profile-img2"> -->
+
+        
+          <div class="popup__profile-description">
+            <a href="#" class="popup__close">&times;</a>
+
+            <h2 class="heading-2 heading-2--yellow heading-2--popup">¡Hola! Mi nombre es Alan Bahena</h2>
+            <p class="popup-description">Soy un desarrollador web freelancer, ingeniero y emprendedor con años de experiencia. Mi propósito es ayudarte a crear paginas web funcionales. Juntos vamos a crear la mejor pagina web
+                                          capaz de ser velox , estable y comunicar el mensaje a tu audiencia e smas de cein mil paises de lationamiercia.
+            </p>
+
+            <ul class="list__popup">
+              <li class="list__popup-item">Adobe Photoshop y Adobe XD</li>
+              <li class="list__popup-item">Funciones avanzadas</li>
+              <li class="list__popup-item">Animaciones</li>
+              <li class="list__popup-item">Imágenes y videos responsivos</li>
+            </ul>
+
+            <p class="popup-description popup-description-profile">Soy un desarrollador web freelancer, ingeniero y emprendedor con años de experiencia. Mi propósito es ayudarte
+            </p>
+
+            <!-- <ul class="list__popup">
+              <li class="list__popup-item">Adobe Photoshop y Adobe XD</li>
+              <li class="list__popup-item">Funciones avanzadas</li>
+            </ul> -->
+
+            <h3 class="heading-3 heading-3--dark heading-3--popup">¿Te gustaria crear la mejor pagina web posible?</h3>
+
+          </div>
+
+      </div>
+
+    </div>
 
 
     <script src="app.js"></script>

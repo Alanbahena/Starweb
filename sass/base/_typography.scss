@@ -30,6 +30,22 @@ body {
 
   &--white { color: $color-white; }
 
+  &--yellow { 
+    color: $color-yellow-dark;
+    padding-bottom: 2rem;
+  }
+
+  &--popup {
+    // text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 4rem;
+
+    @include respond(tab-port) {
+      padding-bottom: 1.5rem;
+    }
+
+  }
+
   &--line {
     &:before {
       content : "";
@@ -44,6 +60,7 @@ body {
   }
 
   &--center-line {
+    text-align: center;
     &:before {
       content : "";
       position: absolute;
@@ -67,6 +84,16 @@ body {
   &--dark { color: $color-primary; }
 
   &--white { color: $color-white; }
+
+  &--popup {
+    margin-top: 5rem;
+    text-align: center;
+
+    @include respond(tab-port) {
+      margin-top: 1.5rem;
+    }
+    
+  }
 }
 
 .heading-4 {
@@ -79,6 +106,8 @@ body {
     &--dark { color: $color-primary; }
 
     &--white { color: $color-white; }
+
+    &--end { align-self: flex-end;}
     
 }
 
@@ -104,6 +133,13 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
+}
+
+.list__popup-item {
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: rgba($color-dark, 0.8);
 }
 
 //Footer
@@ -141,4 +177,22 @@ body {
   font-family: $font-primary;
   font-weight: 400;
   font-size: 1.4rem;
+}
+
+//POPUP 
+
+.popup-description {
+  font-family: $font-primary;
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.2;
+  color: rgba($color-dark, 0.8);
+  padding-bottom: 2.5rem;
+
+  &-profile {
+    @include respond(tab-port) {
+      padding-bottom: 1.5rem;
+    }
+  }
+
 }
