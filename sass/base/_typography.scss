@@ -59,6 +59,10 @@ body {
       }
   }
 
+  &--center {
+    text-align: center;
+  }
+
   &--center-line {
     text-align: center;
     &:before {
@@ -108,8 +112,21 @@ body {
     &--white { color: $color-white; }
 
     &--end { align-self: flex-end;}
-    
 }
+
+.heading-5 {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+//INTRO TEXT
+
+.intro-text {
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+
 
 //Header Text
 

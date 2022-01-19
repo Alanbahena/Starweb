@@ -16,25 +16,39 @@
     width: 60%;
     padding: 1.5rem 2rem;
     border-radius: 2px;
-    background-color: rgba($color-white, .65);
+    background-color: rgba($color-white, .55);
     border: none;
     border-bottom: 3px solid transparent;
     display: block;
     transition: all .3s;
 
+    @include respond (phone) {
+      width: 70%;
+    }
+
+    &::placeholder {
+      color: rgba($color-dark, .8) !important;
+    }
+
     &-dark {
       background-color: rgba($color-dark, 0.05);
+
+      &::placeholder {
+        color: rgba($color-dark, .55) !important;
+      }
 
       @include respond(phone) {
         font-size: 1.4rem;
         padding: 1rem 1.5rem;
       }
 
+      @include respond (phone) {
+        width: 75%;
+      }
+
     }
 
-    @include respond (phone) {
-      width: 75%;
-    }
+    
 
     &:focus {
       outline: none;
@@ -43,7 +57,7 @@
     }
 
     &:focus:invalid {
-      border-bottom: 3px solid $color-yellow-dark;
+      border-bottom: 3px solid $color-secondary-dark;
     }
 
     &::-webkit-input-placeholder {
@@ -93,17 +107,23 @@
   width: 95%;
   padding: 1.5rem 2rem;
   border-radius: 2px;
-  background-color: rgba($color-white, .65);
+  background-color: rgba($color-white, .55);
   border: none;
   border-bottom: 3px solid transparent;
   display: block;
   resize: none;
   transition: all .3s;
 
+  &::placeholder {color: rgba($color-dark, .8) !important}
+
   
 
   &-dark {
     background-color: rgba($color-dark, .05);
+
+    &::placeholder {
+      color: rgba($color-dark, .55) !important;
+    }
 
     @include respond(phone) {
       height: 10rem;
@@ -123,4 +143,4 @@
 
 // Placeholder color distinto en safari
 
-// ::placeholder {color: rgba($color-dark, .56)}
+

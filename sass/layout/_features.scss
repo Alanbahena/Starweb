@@ -5,13 +5,11 @@
   grid-row: 3 / 4;
 
   display: grid;
-  // grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
   align-items: start;
 
 }
-
 
 .feature {
 
@@ -43,7 +41,44 @@
     font-size: 1.7rem;
     letter-spacing: 0.1rem;
   }
+}
 
+///////////////  Tecnologias
 
+.features-tec {
+  grid-column: center-start / center-end ;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  column-gap: 6.5rem;
+  row-gap: 5rem;
+
+  align-items: start;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.feature-box {
+  background-color: rgba($color-primary-gray, .05);
+  padding: 4.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-dark, .15);
+  transition: transform .35s;
+
+  display: grid;
+  row-gap: 1rem;
+
+  &__icon {
+    justify-self: center;
+    fill: $color-yellow-dark;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
 
 }

@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) repeat(8, minmax(min-content, 19rem)) minmax(6rem, 1fr) [full-end];
 
-  &__description {
+  &__description { 
    grid-column: 2 / 6; 
    grid-row: 1 / 2;
    z-index: 1;
@@ -19,7 +19,7 @@
     @include respond(mini-tab) {
       grid-column: 2 / 8;
     }
-
+ 
     @include respond (mini-phone) {
       grid-column: 2 / 10;
     }
@@ -82,6 +82,4 @@
     animation-duration: 1s;
     animation-timing-function: ease-out;
   }
-
-
 }

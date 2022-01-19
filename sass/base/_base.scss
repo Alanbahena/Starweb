@@ -25,6 +25,8 @@ html {
 
 }
 
+// INICIO 
+
 .container {
   display: grid;
   grid-template-rows: min-content 80vh min-content repeat(2, 75vh) repeat(3, min-content);
@@ -33,5 +35,56 @@ html {
   @include respond (mini-tab) {
     grid-template-rows: min-content 80vh min-content repeat(2, min-content) repeat(3, min-content);
   }
+
+}
+
+
+//TECNOLOGIAS
+
+.container-tec {
+  display: grid;
+  grid-template-rows: min-content 80vh min-content repeat(2, 75vh) min-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 19rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+
+  @include respond (mini-tab) {
+    grid-template-rows: min-content 80vh min-content repeat(2, min-content) min-content;
+  }
+
+}
+
+// SERVICIOS 
+
+.container-serv {
+  display: grid;
+  grid-template-rows: min-content 80vh min-content min-content min-content;
+
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 19rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+
+  @include respond (mini-tab) {
+    grid-template-rows: min-content 80vh min-content min-content min-content;
+  }
+}
+
+// PORTAFOLIO 
+
+.container-port {
+  display: grid;
+  grid-template-rows: min-content 80vh repeat(3, 75vh) min-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 19rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+
+  @include respond (mini-tab) {
+    grid-template-rows: min-content 80vh repeat(4, min-content);
+  }
+
+}
+
+// CONTACTO 
+
+.container-contacto {
+
+  display: grid;
+  grid-template-rows: min-content 100vh;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 19rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+
 
 }

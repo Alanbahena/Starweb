@@ -235,3 +235,105 @@
     }
   }
 }
+
+
+
+// CARD SERVICE PAGE
+
+.card-serv {
+  position: relative;
+  border-radius: 3px;
+  height: auto;
+  background-color: $color-white;
+  box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.15);
+
+  &__side {
+    font-size: 2rem;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom,  rgba($color-secondary-light, 0.65), rgba($color-secondary-dark, 0.65));
+      }
+
+      &-2 {
+        background-image: linear-gradient(to right bottom, rgba($color-green-light, 0.65), rgba($color-green-dark, 0.65));
+      }
+
+      &-3 {
+        background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.65), rgba($color-tertiary-dark, 0.65));
+      }
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1.5rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba($color-primary-gray, 0.2);
+        }
+
+      }
+    }
+  }
+
+  &__cta {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    padding: 7rem 4rem 4rem 4rem;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 2.5rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+
+  &__text {
+    padding-top: 2.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem; 
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+
+
+}
