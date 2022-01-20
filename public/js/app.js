@@ -1,0 +1,34 @@
+const contactForm = document.querySelector('.form');
+
+  let name = document.getElementById('name');
+  let email = document.getElementById('email');
+  let message = document.getElementById('message');
+
+contactForm.addEventListener('submit', (e)=> {
+  e.preventDefault();
+
+  let formData = {
+    name: name.value,
+    email: email.value,
+    message: message.value
+  }
+
+  let xhr = new XMLHttpRequest();
+  xhr.open('POST', '/');
+  xhr.setRequestHeader('content-type', 'application/json');
+
+  xhr.onload = function(){
+    console.log(xhr.responseText);
+    if(xhr.responseText == 'success') {
+      alert('Tu correo ha sido enviado, pronto Alan se pondra en contacto contigo');
+      name.value = '';
+      email.value = '';
+      message.value = '';
+    } else { 
+      alert('Algo ha ocurrido! Por favor volver a intentar')
+    }
+  }
+
+  xhr.send(JSON.stringify(formData));
+
+});

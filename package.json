@@ -4,10 +4,11 @@
   "description": "Freelance",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon server.js",
+    "startnode": "node server.js",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server --browser=firefox",
     "start": "npm-run-all --parallel devserver watch:sass",
-
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
@@ -21,5 +22,13 @@
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.1",
     "postcss-cli": "^4.1.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "nodemailer": "^6.7.2",
+    "request": "^2.88.2"
   }
 }
