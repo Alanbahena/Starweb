@@ -16,6 +16,9 @@
   },
   "author": "Alan Bahena",
   "license": "ISC",
+  "engines": {
+    "node": "14.15.1"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "concat": "^1.0.3",
