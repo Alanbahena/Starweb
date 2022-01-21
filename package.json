@@ -2,7 +2,7 @@
   "name": "landingpage",
   "version": "1.0.0",
   "description": "Freelance",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
     "startnode": "node server.js"
