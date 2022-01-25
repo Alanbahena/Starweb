@@ -5,6 +5,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-217966536-1"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-217966536-1');
+      </script>
+
       <!-- Google Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +48,9 @@
       <!-- Helps prevent duplicate content issues -->
       <link rel="canonical" href="http://example.com/2017/09/a-new-article-to-read.html">
 
+      
+
+      <!-- Title -->
       <title>Starweb &mdash; Desarollo Web Freelance</title>
 
 
@@ -97,6 +110,7 @@
         <img srcset="img/header_lap-small.png 600w, img/header_lap.png 1200w"
              sizes="(max-width: 900px) 32vw, 600px"
              alt="Computer"
+             loading="lazy"
              class="header__computer-gif"
              src="img/header_lap.png"> 
       </div>
@@ -120,7 +134,7 @@
             <use xlink:href="img/sprite.svg#icon-trophy"></use>
         </svg>
         <h4 class="heading-4 heading-4--dark">Programación y Diseño Web</h4>
-        <p class="feature__text">Crea plataformas veloces con diseños modernos e innovadores, programadas con los últimos avances en tecnología web.</p>
+        <p class="feature__text">Calidad en plataformas veloces con diseños modernos e innovadores, programadas con los últimos avances en tecnología web.</p>
       </div>
 
       <div class="feature">
@@ -128,7 +142,7 @@
             <use xlink:href="img/sprite.svg#icon-mobile"></use>
         </svg>
         <h4 class="heading-4 heading-4--dark">Paginas Responsivas</h4>
-        <p class="feature__text">Podrás tener acceso a tus aplicaciones web desde cualquier dispositivo, ya que cuentan con un diseño innovador que se ajusta según el tamaño de pantalla.</p>
+        <p class="feature__text">Podrás tener acceso a tus aplicaciones web desde cualquier dispositivo, ya que cuentan con un diseño que se ajusta según el tamaño de pantalla.</p>
       </div>
 
       <div class="feature">
@@ -136,7 +150,7 @@
             <use xlink:href="img/sprite.svg#icon-briefcase"></use>
         </svg>
         <h4 class="heading-4 heading-4--dark">Administración de Proyectos</h4>
-        <p class="feature__text">Se parte del proceso en la creación de tu página web, con un manejo de proyecto previo, revisiones y línea del tiempo.</p>
+        <p class="feature__text">Sé parte del proceso en la creación de tu página web, con un manejo de proyecto previo, revisiones y línea del tiempo.</p>
       </div>
 
       <div class="feature">
@@ -165,14 +179,14 @@
     <section class="description-1">
       <div class="tec__description-1">  
         <h2 class="heading-2 heading-2--dark heading-2--line">Modernos Diseños Responsivos</h2>
-        <p class="description__text">¿Sabías que visitar una página web te proporciona una experiencia única?  Crea un impacto con diseños modernos e innovadores, funciones avanzadas, animaciones, imágenes y videos responsivos que se ajustan a cualquier tamaño de pantalla.</p>
+        <p class="description__text">¿Te gustaría crear una experiencia digital única? Crea un impacto con diseños modernos e innovadores, funciones avanzadas, animaciones, imágenes y videos responsivos que se ajustan a cualquier tamaño de pantalla.</p>
   
         <ul class="list">
           <li class="list__item">Adobe Photoshop y Adobe XD</li>
           <li class="list__item">Funciones avanzadas</li>
           <li class="list__item">Animaciones</li>
           <li class="list__item">Imágenes y videos responsivos</li>
-          <li class="list__item">Diseños modernos e innovadores</li>
+          <li class="list__item">Diseños Intuitivos</li>
         </ul>
   
         <a href="portafolio.html" class="btn btn--yellow-dark description--btn">Conoce más &rarr;</a>
@@ -183,6 +197,7 @@
         <img srcset="img/iphone-small.png 160w, img/iphone.png 319w"
         sizes="(max-width: 900px) 11vw, (max-width: 600px) 14vw,  190px"
         alt="iphone"
+        loading="lazy"
         class="tec__pictures-1-iphone"
         src="img/iphone.png"> 
 
@@ -197,13 +212,13 @@
     <section class="description-2">
       <div class="tec__description-2">
         <h2 class="heading-2 heading-2--dark heading-2--line">Tecnologías y Plataformas Web</h2>
-        <p class="description__text">¿Te gustaría crear plataformas web veloces y funcionales en cualquier navegador de internet? Transmite una experiencia única a tus usuarios, con un hospedaje veloz y un registro seguro de tu dominio.</p>
+        <p class="description__text">¿Te gustaría crear plataformas web veloces, funcionales y seguras en cualquier navegador de internet? Transmite una experiencia positiva a tus usuarios, protegiendo sus datos y asegurando una maxima velocidad en tu aplicación.</p>
   
         <ul class="list">
           <li class="list__item">HTML5 & CSS3</li>
           <li class="list__item">JavaScript & NodeJS</li>
           <li class="list__item">Base de Datos MongoDB</li>
-          <li class="list__item">Maxima velocidad en hosting y dominios</li>
+          <li class="list__item">Hosting y Dominios</li>
           <li class="list__item">Integracion plataformas automatizadas como Mailchimp</li>
         </ul>
   
@@ -379,6 +394,7 @@
           <img srcset="img/logo-footer-small.png 157w, img/logo-footer.png 314w"
         sizes="(max-width: 900px) 11vw,  120px"
         alt="logo"
+        loading="lazy"
         class="footer__slogan-logo" 
         src="img/logo-footer.png"> 
           <p class="footer__slogan-text">Convierte tus ideas en páginas web y llevalas al siguiente nivel en el mundo digital</p>
@@ -407,12 +423,14 @@
         <img srcset="img/profile-small.jpg 225w, img/profile.jpg 450w"
         sizes="(max-width: 900px) 37vw, (max-width: 600px) 28vw,  434px"
         alt="Profile photo"
+        loading="lazy"
         class="popup__profile-img" 
         src="img/profile.jpg"> 
 
         <img srcset="img/profile2-small.jpg 640w, img/profile2.jpg 1280w"
         sizes="(max-width: 900px) 37vw, (max-width: 600px) 24vw,  462px"
         alt="Profile photo"
+        loading="lazy"
         class="popup__profile-img2" 
         src="img/profile2.jpg"> 
 
@@ -420,17 +438,21 @@
             <a href="#" class="popup__close">&times;</a>
 
             <h2 class="heading-2 heading-2--yellow heading-2--popup">¡Hola! Mi nombre es Alan Bahena</h2>
-            <p class="popup-description">Durante los últimos años he dedicado mayor parte de mi tiempo al emprendimiento, al desarrollo de ideas que generen un impacto en la sociedad, mi propósito es ayudarte a ti a crear un impacto digital que transmita tu visión.
+            <p class="popup-description">Durante los últimos años he dedicado la mayor parte de mi tiempo al emprendimiento, al desarrollo de ideas que generen un impacto en la sociedad, conoce un poco sobre mi trayectoria profesional.
             </p>
 
-            <ul class="list__popup">
-              <li class="list__popup-item">Soy un desarrollador Web Freelance</li>
-              <li class="list__popup-item">Ingeniero con experiencia internacional en Alemania</li>
-              <li class="list__popup-item">Emprendedor, he desarrollado aplicaciones web y móviles</li>
-              <li class="list__popup-item">He estudiado un B.A en administración de empresas</li>
-            </ul>
+            <!-- <ul class="list__popup">
+              <li class="list__popup-item">Conoce mi trayectoria como Web Freelance</li>
+              <li class="list__popup-item">Una de mis mayores hablidades es la creatividad</li>
+              <li class="list__popup-item">Soy egresado de ingenieria con experiencia internacional en Alemania</li>
+              <li class="list__popup-item">Emprendedor con un B.A que ha desarrollado aplicaciones web y móviles</li>
+            </ul> -->
 
-            <p class="popup-description popup-description-profile">Mi propósito es ayudarte con mis habilidades a generar un impacto digital. 
+            <p class="popup-description">En el 2018 me gradué como ingeniero, posteriormente decidí seguir mi pasión en la Industria Automotriz donde llegué a trabajar en Alemania. Fue ahí donde decidí utilizar
+              mis habilidades y experiencia para intentar crear impactos positivos en la sociedad. Desarrollé aplicaciones web y móviles, donde aprendí lo esencial al emprendedor.
+            </p>
+
+            <p class="popup-description popup-description-profile"> Mi proposito es utilizar mi experiencia y habilidades para crear juntos una moderna aplicación digital
             </p>
 
             <h3 class="heading-3 heading-3--dark heading-3--popup">¿Estás listo para crear tu próxima aplicación web?</h3>

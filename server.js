@@ -15,7 +15,7 @@ app.use(express.json());
 
 //HOME
 
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
     res.sendFile(__dirname + "/index.html"); 
 });
 
@@ -24,6 +24,9 @@ app.post('/', (req, res)=> {
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
+    type: "SMTP",
+    host: "smtp.gmail.com",
+    secure: true, 
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PASS
