@@ -10,28 +10,31 @@ require ('dotenv').config();
 const app = express();
 
 //Middleware
-app.use(express.static("public")); 
+app.use(express.static("public"));  
 app.use(express.json());
 
 //HOME
+
+/* Redirect http to https */
+app.get("*", function (req, res, next) {
+
+  if ("https" !== req.headers["x-forwarded-proto"] && "production" === process.env.NODE_ENV) {
+      res.redirect("https://" + req.hostname + req.url);
+  } else {
+      // Continue to other routes if we're not redirecting
+      next();
+  }
+
+});
 
 app.get('/index', (req, res) => {
     res.sendFile(__dirname + "/index.html"); 
 });
 
+
+
 app.post('/', (req, res)=> {
   console.log(req.body);
-
-  // const transporter = nodemailer.createTransport({
-  //   service: 'gmail',
-  //   type: "SMTP",
-  //   host: "smtp.gmail.com",
-  //   secure: true, 
-  //   auth: {
-  //     user: process.env.EMAIL,
-  //     pass: process.env.PASS
-  //   }
-  // });
 
   const transporter = nodemailer.createTransport({
     host: "smtpout.secureserver.net",
