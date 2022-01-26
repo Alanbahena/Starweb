@@ -22,20 +22,30 @@ app.get('/index', (req, res) => {
 app.post('/', (req, res)=> {
   console.log(req.body);
 
+  // const transporter = nodemailer.createTransport({
+  //   service: 'gmail',
+  //   type: "SMTP",
+  //   host: "smtp.gmail.com",
+  //   secure: true, 
+  //   auth: {
+  //     user: process.env.EMAIL,
+  //     pass: process.env.PASS
+  //   }
+  // });
+
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    type: "SMTP",
-    host: "smtp.gmail.com",
+    host: "smtpout.secureserver.net",
+    port: 465,
     secure: true, 
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASS
+      user: process.env.EMAIL1,
+      pass: process.env.PASS1
     }
-  })
+  });
 
   const mailOptions = {
     from: req.body.email,
-    to: 'alanbahena1@gmail.com',
+    to: 'info@starweb.services',
     subject: "Tienes un nuevo mensaje de un Cliente",
     text: req.body.message
   };
