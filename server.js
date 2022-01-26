@@ -8,24 +8,15 @@ const PORT = process.env.PORT || 3000;
 require ('dotenv').config();
 
 const app = express();
+var http = require('http');
+var enforce = require('express-sslify');
 
 //Middleware
 app.use(express.static("public"));  
 app.use(express.json());
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 //HOME
-
-/* Redirect http to https */
-app.get("*", function (req, res, next) {
-
-  if ("https" !== req.headers["x-forwarded-proto"] && "production" === process.env.NODE_ENV) {
-      res.redirect("https://" + req.header.host + req.url);
-  } else {
-      // Continue to other routes if we're not redirecting
-      next();
-  }
-
-});
 
 app.get('/index', (req, res) => {
     res.sendFile(__dirname + "/index.html"); 
