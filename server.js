@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 require("dotenv").config();
 
 const app = express();
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+// app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 //Middleware
 app.use(express.static("public"));
